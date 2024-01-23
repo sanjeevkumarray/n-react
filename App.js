@@ -24,22 +24,50 @@
  * ReactElement(Object) =>HTML (Browser Understands)
 
  */
+import React  from "react";
+import  ReactDOM  from "react-dom/client";
+
+// const parent = React.createElement("div",{id:"parent"},[
+//     React.createElement("div",{id:"child"},[
+//       React.createElement("h1",{}, "I'm an h1 tag"),
+//       React.createElement("h2",{},"I'm an h2 tag"),
+//     ]),
+
+//     React.createElement("div",{id:"child2"},[
+//         React.createElement("h1",{}, "I'm an h1 tag"),
+//         React.createElement("h2",{},"I'm an h2 tag"),
+//       ]),
+//     ]);
+
+    //Jsx
+// console.log(parent); // object
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(parent);
 
 
-const parent = React.createElement("div",{id:"parent"},[
-    React.createElement("div",{id:"child"},[
-      React.createElement("h1",{}, "I'm an h1 tag"),
-      React.createElement("h2",{},"I'm an h2 tag"),
-    ]),
 
-    React.createElement("div",{id:"child2"},[
-        React.createElement("h1",{}, "I'm an h1 tag"),
-        React.createElement("h2",{},"I'm an h2 tag"),
-      ]),
-    ]);
+//React Eelement
+const Title = () => (
+  <h1 className="head" tabIndex="5">
+  React Using JSX!
+  </h1>
+);
 
-//Jsx
-console.log(parent); // object
+// React Functional Component
+ const HeadingComponent =()=>(
+  <div id="container">
+    <Title/>
+     <h1> React  Functional  Component</h1>
+  </div>
+ );
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
+ const HeadingComponent2 =()=>{
+   <h1 className="heading"> React  Functional  Component</h1>
+};
+
+ const root= ReactDOM.createRoot(document.getElementById("root"));
+  // root.render(Title);
+  root.render(<HeadingComponent/>);
+ 
+
